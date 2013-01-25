@@ -20,6 +20,22 @@ typedef enum HelloDocEnumDocDemo_{
 }HelloDocEnumDocDemo;
 
 /*!
+ @typedef TypedefdEnum
+ @abstract Abstract for this API.
+ @constant aCFCompareLessThan Description of first constant.
+ @constant aCFCompareEqualTo Description of second constant.
+ @constant aCFCompareGreaterThan Description of third constant.
+ @discussion Discussion that applies to the entire typedef'd enum.
+ Lorem ipsum....
+ */
+typedef enum {
+    aCFCompareLessThan = -1,
+    aCFCompareEqualTo = 0,
+    aCFCompareGreaterThan = 1,
+} TypedefdEnum;
+
+
+/*!
  @const kCFTypeArrayCallBacks
  @abstract Predefined CFArrayCallBacks structure containing a set of callbacks appropriate...
  @discussion Extended discussion goes here.
@@ -74,21 +90,6 @@ typedef struct _structTag {
     short firstField;
     unsigned long secondField;
 } TypedefdSimpleStruct;
-
-/*!
- @typedef TypedefdEnum
- @abstract Abstract for this API.
- @constant aCFCompareLessThan Description of first constant.
- @constant aCFCompareEqualTo Description of second constant.
- @constant aCFCompareGreaterThan Description of third constant.
- @discussion Discussion that applies to the entire typedef'd enum.
- Lorem ipsum....
- */
-typedef enum {
-    aCFCompareLessThan = -1,
-    aCFCompareEqualTo = 0,
-    aCFCompareGreaterThan = 1,
-} TypedefdEnum;
 
 /*!
  @typedef simpleCallback
@@ -168,6 +169,8 @@ typedef struct _someTag {
  @result 返回结果
  */
 - (BOOL)showText:(NSString *)text 
+           error:(NSError **)error
+           error:(NSError **)error
            error:(NSError **)error;
 
 @end
